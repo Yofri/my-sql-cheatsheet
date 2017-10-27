@@ -23,7 +23,7 @@ CREATE TABLE celebs (
 ```
 
 ### Wildcard Character
-* * matches all.
+* \* matches all.
 * _ subtitute any individual character without breaking the pattern.
 * % matches zero or more missing letters in the pattern (case insensitive).
 
@@ -53,49 +53,60 @@ CREATE TABLE celebs (
 
 ### Statements Manipulation
 `CREATE TABLE <table> (<key> <type>);`
+
 `CREATE TABLE celebs (id INTEGER, name TEXT, age INTEGER);`
 > create table/relation in database
 
 `INSERT INTO <table> (<key>) VALUES (<type>);`
+
 `INSERT INTO celebs (id, name, age) VALUES (1, 'Justin Bieber', 21);`
 > add new row/record into table/relation
 
 `SELECT <key / wildcard> FROM <table>;`
+
 `SELECT * FROM celebs;`
 > return all query data from table/relation
 
 `UPDATE <table> SET <key> = <value> WHERE <key> = <value>;`
+
 `UPDATE celebs SET age = 22 WHERE id = 1;`
 > change/edit existing row/records
 
 `ALTER TABLE <table> ADD COLUMN <key> <type>;`
+
 `ALTER TABLE celebs ADD COLUMN twitter TEXT;`
 > add new column into row/records
 
 `DELETE FROM <table> WHERE <key> IS <type>;`
+
 `DELETE FROM celebs WHERE twitter IS NULL;`
 > delete existing row/records
 
 ### Statements Queries
 `SELECT DISTINCT <key> FROM <table>;`
+
 `SELECT DISTINCT genre FROM movies;`
 > filter result to return unique values
 
 `SELECT <key / wildcard> FROM <table> WHERE <condition1> OPERATOR <condition2>;`
+
 `SELECT * FROM movies WHERE imdb_rating > 8;`
 > filter result to return value based on condition
 
 `SELECT <key / wildcard> FROM <table> WHERE <key> OPERATOR <condition>;`
+
 `SELECT * FROM movies WHERE name LIKE 'Se_en';`
 > filter result to return value based on patter of wildcard
 
 `SELECT <key / wildcard> FROM <table> WHERE <key> BETWEEN <condition1> OPERATOR <condition2>;`
+
 `SELECT * FROM movies WHERE name BETWEEN 'A' AND 'J';`
 > this statement filters the result set to only include movies with names that begin with letters "A" up to but not including "J".
 `SELECT * FROM movies WHERE year BETWEEN 1990 AND 2000;`
 > In this statement, the BETWEEN operator is being used to filter the result set to only include movies with years between 1990 up to and including 2000.
 
 `SELECT <key / wildcard> FROM <table> WHERE <condition1> OPERATOR <condition2> OPEARTOR <condition3> OPERATOR <condition4>`
+
 `SELECT * FROM movies WHERE genre = 'comedy' OR year < 1980;`
 > at this statement, the OR operator return movies either have a genre of comedy or were released before 1980
 
