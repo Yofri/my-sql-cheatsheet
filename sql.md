@@ -5,9 +5,11 @@
 * TEXT a text string.
 * DATE a date formatted as YYYY-MM-DD.
 * REAL a decimal value.
+* VARCHAR a text of string with limit.
 * NULL special value that represents missing or unknown data.
 
 ### Constraints
+* AUTOINCREMENT 
 * PRIMARY KEY columns can be used to uniquely identify the row.
 * UNIQUE columns have a different value for every row, more than once.
 * NOT NULL columns must have a value.
@@ -102,6 +104,7 @@ CREATE TABLE celebs (
 
 `SELECT * FROM movies WHERE name BETWEEN 'A' AND 'J';`
 > this statement filters the result set to only include movies with names that begin with letters "A" up to but not including "J".
+
 `SELECT * FROM movies WHERE year BETWEEN 1990 AND 2000;`
 > In this statement, the BETWEEN operator is being used to filter the result set to only include movies with years between 1990 up to and including 2000.
 
