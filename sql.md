@@ -32,9 +32,9 @@ CREATE TABLE celebs (
 ### Operators WHERE clause
 * = equals.
 * != not equals.
-* > greater than.
+* \> greater than.
 * < less than.
-* >= greater than or equal to.
+* \>= greater than or equal to.
 * <= less than or equal to.
 * LIKE compare similar values.
 * BETWEEN filter result within a certain range.
